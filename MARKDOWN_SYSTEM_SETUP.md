@@ -1,34 +1,62 @@
-# Next.js + Markdown Content System Implementation
+# Markdown Content System for danyelliot.dev
 
-## 🎉 Successfully Implemented!
+## 🎉 Complete System Successfully Implemented!
 
-Your Next.js + Tailwind project now supports Markdown content with frontmatter. Here's what we've built:
+This Next.js + Tailwind project now supports a comprehensive Markdown content system with hierarchical organization, dynamic routing, and GitHub Pages deployment.
 
-## 📁 File Structure
+## 📁 Complete File Structure
 
 ```
 danyelliot.dev/
 ├── content/
-│   ├── posts/
+│   ├── posts/                  # Blog articles
 │   │   ├── az-104-week-1.md
 │   │   └── home-security-lab.md
-│   └── projects/
-│       ├── network-traffic-analyzer.md
-│       └── vulnerability-scanner.md
+│   ├── projects/               # Project showcases
+│   │   ├── network-traffic-analyzer.md
+│   │   └── vulnerability-scanner.md
+│   └── learning/               # Structured learning content
+│       ├── az-104/             # Azure AZ-104 certification journey
+│       │   ├── overview.md
+│       │   ├── week-1.md
+│       │   └── week-2.md
+│       ├── appsec-labs/        # Application Security labs
+│       │   ├── overview.md
+│       │   └── sql-injection-lab.md
+│       ├── devsecops/          # DevSecOps practices
+│       │   ├── overview.md
+│       │   └── pipeline-security.md
+│       └── malware-reversing/  # Malware analysis content
+│           ├── overview.md
+│           └── static-analysis.md
 ├── lib/
-│   └── posts.ts                 # Markdown processing utilities
+│   ├── posts.ts               # Complete content processing utilities
+│   └── base-path.ts           # Path utilities for deployment
 ├── components/
-│   └── markdown-content.tsx     # Markdown renderer component
+│   ├── markdown-content.tsx   # Enhanced Markdown renderer
+│   └── navigation.tsx         # Site navigation with proper routing
 ├── app/
 │   ├── blog/
-│   │   ├── page.tsx            # Blog listing page
+│   │   ├── page.tsx          # Blog listing with Markdown integration
 │   │   └── [slug]/
-│   │       └── page.tsx        # Dynamic blog post pages
-│   └── projects/
-│       ├── page.tsx            # Projects listing page
-│       └── [slug]/
-│           └── page.tsx        # Dynamic project pages
-└── package.json                # Updated with new dependencies
+│   │       └── page.tsx      # Dynamic blog post pages
+│   ├── projects/
+│   │   ├── page.tsx          # Projects showcase listing
+│   │   └── [slug]/
+│   │       └── page.tsx      # Dynamic project pages
+│   └── learning/
+│       ├── page.tsx          # Learning journeys hub
+│       └── [journey]/
+│           ├── page.tsx      # Journey overview pages
+│           └── [slug]/
+│               └── page.tsx  # Individual learning posts
+├── .github/
+│   └── workflows/
+│       └── deploy.yml        # Automated GitHub Pages deployment
+├── public/
+│   ├── CNAME                 # Custom domain configuration
+│   └── .nojekyll            # Prevent Jekyll processing
+└── next.config.mjs          # Static export configuration
 ```
 
 ## 🔧 Dependencies Added
@@ -40,17 +68,49 @@ danyelliot.dev/
 - `rehype-highlight` - Syntax highlighting for code blocks
 - `rehype-slug` - Generate slugs for headings
 
-## 📝 Frontmatter Format
+## 📝 Comprehensive Frontmatter Schema
 
-Each Markdown file should include frontmatter at the top:
-
+### Blog Posts (`content/posts/`)
 ```yaml
 ---
-title: "Your Post Title"
-date: "2025-09-15"
-tags: ["tag1", "tag2", "tag3"]
-description: "A brief description of your content"
+title: "Post Title"
+description: "Brief description for SEO and listing pages"
+date: "2024-01-15"
+tags: ["cybersecurity", "azure", "tutorial"]
+author: "Dan Elliott"
+published: true
 ---
+```
+
+### Projects (`content/projects/`)
+```yaml
+---
+title: "Project Name"
+description: "Project description and key features"
+date: "2024-01-15"
+tags: ["security", "tool", "python"]
+author: "Dan Elliott"
+published: true
+github: "https://github.com/username/repo"  # Optional
+demo: "https://demo-url.com"                # Optional
+tech: ["Python", "Flask", "SQLite"]        # Technologies used
+---
+```
+
+### Learning Content (`content/learning/[journey]/`)
+```yaml
+---
+title: "Learning Topic Title"
+description: "Description of the learning content"
+date: "2024-01-15"
+tags: ["azure", "certification", "cloud"]
+author: "Dan Elliott"
+published: true
+journey: "az-104"                           # Journey identifier
+order: 1                                    # Order within journey
+status: "completed"                         # completed, in-progress, planned
+---
+```
 
 # Your Markdown Content
 
