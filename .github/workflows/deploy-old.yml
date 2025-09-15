@@ -1,0 +1,113 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Clean previous builds
+        run: |
+          rm -rf .next out
+          echo "Cleaned previous build artifacts"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        with:
+          static_site_generator: next
+
+      - name: Build with Next.js
+        run: |
+          echo "Starting Next.js build..."
+          pnpm build
+          echo "Build completed, checking output..."
+          if [ -d "out" ]; then
+            echo "✅ Static export successful - out directory created"
+            ls -la out/ | head -10
+          elif [ -d ".next" ]; then
+            echo "❌ Static export failed - only .next directory found"
+            echo "This means Next.js built for server mode instead of static export"
+            ls -la .next/ | head -5
+          else
+            echo "❌ Build completely failed - no output directories found"
+          fi
+        env:
+          NODE_ENV: production
+
+      - name: Debug build output
+        run: |
+          echo "=== Checking current directory ==="
+          pwd
+          echo "=== Listing all files and directories ==="
+          ls -la
+          echo "=== Checking for out directory ==="
+          if [ -d "out" ]; then
+            echo "✅ out directory exists"
+            ls -la out/
+          else
+            echo "❌ out directory not found"
+          fi
+          echo "=== Checking for .next directory ==="
+          if [ -d ".next" ]; then
+            echo "✅ .next directory exists"
+            ls -la .next/
+          else
+            echo "❌ .next directory not found"
+          fi
+          echo "=== Checking next.config.mjs ==="
+          cat next.config.mjs
+          echo "=== Checking package.json build script ==="
+          cat package.json | grep -A 5 -B 5 '"build"'
+
+      - name: Ensure out directory exists for upload
+        run: |
+          if [ ! -d "out" ]; then
+            echo "Creating out directory as fallback..."
+            mkdir -p out
+            echo "<h1>Build Error</h1><p>The out directory was not created by Next.js build</p>" > out/index.html
+          fi
+          echo "Final verification - out directory contents:"
+          ls -la out/
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
