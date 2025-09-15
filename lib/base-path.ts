@@ -1,11 +1,12 @@
 import { usePathname } from 'next/navigation'
 
-const basePath = process.env.NODE_ENV === 'production' ? '/danyelliot.dev' : ''
+// For GitHub Pages deployment with custom domain - no basePath needed
+const basePath = ''
 
 export function useBasePath() {
   return basePath
 }
 
 export function withBasePath(path: string) {
-  return basePath + path
+  return path
 }
