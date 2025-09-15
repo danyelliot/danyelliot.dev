@@ -1,12 +1,12 @@
 import { usePathname } from 'next/navigation'
 
-// For GitHub Pages deployment with custom domain - no basePath needed
-const basePath = ''
+// For GitHub Pages deployment without custom domain
+const basePath = '/danyelliot.dev'
 
 export function useBasePath() {
   return basePath
 }
 
 export function withBasePath(path: string) {
-  return path
+  return basePath + path
 }

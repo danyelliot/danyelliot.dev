@@ -2,7 +2,7 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  // Remove basePath for GitHub Pages with custom domain
+  basePath: '/danyelliot.dev',
   eslint: {
     ignoreDuringBuilds: true,
   },
