@@ -1,4 +1,4 @@
-# Markdown Content System for danyelliot.dev
+# Markdown Content System for website
 
 ## 🎉 Complete System Successfully Implemented!
 
@@ -7,7 +7,7 @@ This Next.js + Tailwind project now supports a comprehensive Markdown content sy
 ## 📁 Complete File Structure
 
 ```
-danyelliot.dev/
+website/
 ├── content/
 │   ├── posts/                  # Blog articles
 │   │   ├── az-104-week-1.md

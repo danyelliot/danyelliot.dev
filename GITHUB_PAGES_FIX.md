@@ -15,17 +15,17 @@ El sitio se construye correctamente pero GitHub Pages devuelve 404 porque **nece
 
 ### PASO 1: Configurar GitHub Pages (OBLIGATORIO)
 
-1. Ve a: https://github.com/danyelliot/danyelliot.dev/settings/pages
+1. Ve a: https://github.com/danyelliot/website/settings/pages
 2. En "Source", selecciona: **"GitHub Actions"**
-3. En "Custom domain", escribe: **danyelliot.dev**
+3. En "Custom domain", deja vacío (o configura si tienes dominio)
 4. Haz clic en "Save"
 
 ### PASO 2: Verificar el Deployment
 
 Después de configurar GitHub Pages:
-1. Ve a la pestaña "Actions" del repositorio
+1. Ve a la pestaña "Actions" del repositorio: https://github.com/danyelliot/website/actions
 2. Espera a que termine el deployment actual
-3. Verifica que aparezca: "Your site is published at https://danyelliot.dev"
+3. Verifica que aparezca: "Your site is published at https://danyelliot.github.io/website/"
 
 ### PASO 3: DNS (si tienes el dominio)
 
