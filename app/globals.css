@@ -11,33 +11,33 @@
   --card-foreground: oklch(0.98 0 0); /* White text on cards */
   --popover: oklch(0.15 0.02 240); /* Dark popover */
   --popover-foreground: oklch(0.98 0 0); /* White popover text */
-  --primary: oklch(0.65 0.15 160); /* Emerald primary */
+  --primary: oklch(0.65 0.12 220); /* Soft cyan primary */
   --primary-foreground: oklch(0.11 0.02 240); /* Dark text on primary */
   --secondary: oklch(0.25 0.02 240); /* Dark secondary */
   --secondary-foreground: oklch(0.98 0 0); /* White text on secondary */
   --muted: oklch(0.25 0.02 240); /* Muted background */
   --muted-foreground: oklch(0.7 0.02 240); /* Muted text */
-  --accent: oklch(0.7 0.15 160); /* Bright emerald accent */
+  --accent: oklch(0.7 0.12 220); /* Soft cyan accent */
   --accent-foreground: oklch(0.11 0.02 240); /* Dark text on accent */
   --destructive: oklch(0.6 0.2 20); /* Red for destructive */
   --destructive-foreground: oklch(0.98 0 0); /* White text on destructive */
   --border: oklch(0.25 0.02 240); /* Dark borders */
   --input: oklch(0.15 0.02 240); /* Dark input background */
-  --ring: oklch(0.7 0.15 160); /* Emerald focus ring */
-  --chart-1: oklch(0.65 0.15 160); /* Emerald chart color */
-  --chart-2: oklch(0.7 0.15 160); /* Bright emerald */
+  --ring: oklch(0.7 0.12 220); /* Soft cyan focus ring */
+  --chart-1: oklch(0.65 0.12 220); /* Soft cyan chart color */
+  --chart-2: oklch(0.7 0.12 220); /* Bright soft cyan */
   --chart-3: oklch(0.6 0.2 280); /* Purple accent */
   --chart-4: oklch(0.5 0.15 200); /* Cyan accent */
   --chart-5: oklch(0.6 0.2 20); /* Red accent */
   --radius: 0.5rem;
   --sidebar: oklch(0.13 0.02 240); /* Slightly lighter sidebar */
   --sidebar-foreground: oklch(0.98 0 0); /* White sidebar text */
-  --sidebar-primary: oklch(0.65 0.15 160); /* Emerald sidebar primary */
+  --sidebar-primary: oklch(0.65 0.12 220); /* Soft cyan sidebar primary */
   --sidebar-primary-foreground: oklch(0.11 0.02 240); /* Dark text on sidebar primary */
   --sidebar-accent: oklch(0.25 0.02 240); /* Dark sidebar accent */
   --sidebar-accent-foreground: oklch(0.98 0 0); /* White text on sidebar accent */
   --sidebar-border: oklch(0.25 0.02 240); /* Dark sidebar border */
-  --sidebar-ring: oklch(0.7 0.15 160); /* Emerald sidebar focus ring */
+  --sidebar-ring: oklch(0.7 0.12 220); /* Soft cyan sidebar focus ring */
 }
 
 .dark {
@@ -48,32 +48,32 @@
   --card-foreground: oklch(0.98 0 0); /* White card text */
   --popover: oklch(0.12 0.02 240); /* Dark popover */
   --popover-foreground: oklch(0.98 0 0); /* White popover text */
-  --primary: oklch(0.75 0.18 160); /* Brighter emerald primary */
+  --primary: oklch(0.7 0.15 220); /* Bright soft cyan primary */
   --primary-foreground: oklch(0.08 0.02 240); /* Very dark text on primary */
   --secondary: oklch(0.2 0.02 240); /* Dark secondary */
   --secondary-foreground: oklch(0.98 0 0); /* White secondary text */
   --muted: oklch(0.2 0.02 240); /* Dark muted */
   --muted-foreground: oklch(0.65 0.02 240); /* Lighter muted text */
-  --accent: oklch(0.8 0.18 160); /* Very bright emerald accent */
+  --accent: oklch(0.75 0.15 220); /* Bright soft cyan accent */
   --accent-foreground: oklch(0.08 0.02 240); /* Dark accent text */
   --destructive: oklch(0.65 0.25 20); /* Bright red */
   --destructive-foreground: oklch(0.98 0 0); /* White destructive text */
   --border: oklch(0.2 0.02 240); /* Dark border */
   --input: oklch(0.12 0.02 240); /* Dark input */
-  --ring: oklch(0.8 0.18 160); /* Bright emerald ring */
-  --chart-1: oklch(0.75 0.18 160); /* Bright emerald */
-  --chart-2: oklch(0.8 0.18 160); /* Very bright emerald */
+  --ring: oklch(0.8 0.18 220); /* Bright soft cyan ring */
+  --chart-1: oklch(0.75 0.18 220); /* Bright soft cyan */
+  --chart-2: oklch(0.8 0.18 220); /* Very bright soft cyan */
   --chart-3: oklch(0.7 0.25 280); /* Bright purple */
   --chart-4: oklch(0.6 0.2 200); /* Bright cyan */
   --chart-5: oklch(0.65 0.25 20); /* Bright red */
   --sidebar: oklch(0.1 0.02 240); /* Dark sidebar */
   --sidebar-foreground: oklch(0.98 0 0); /* White sidebar text */
-  --sidebar-primary: oklch(0.75 0.18 160); /* Bright emerald sidebar primary */
+  --sidebar-primary: oklch(0.75 0.15 220); /* Bright soft cyan sidebar primary */
   --sidebar-primary-foreground: oklch(0.08 0.02 240); /* Dark sidebar primary text */
   --sidebar-accent: oklch(0.2 0.02 240); /* Dark sidebar accent */
   --sidebar-accent-foreground: oklch(0.98 0 0); /* White sidebar accent text */
   --sidebar-border: oklch(0.2 0.02 240); /* Dark sidebar border */
-  --sidebar-ring: oklch(0.8 0.18 160); /* Bright emerald sidebar ring */
+  --sidebar-ring: oklch(0.8 0.18 220); /* Bright soft cyan sidebar ring */
 }
 
 @theme inline {
@@ -125,8 +125,8 @@
     @apply bg-background text-foreground;
   }
 
-  /* Added glow effect for cyberpunk aesthetic */
+  /* Very subtle glow effect for modern aesthetic */
   .glow-text {
-    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor;
+    text-shadow: 0 0 3px currentColor;
   }
 }

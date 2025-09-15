@@ -1,7 +1,8 @@
 import { usePathname } from 'next/navigation'
 
 // For GitHub Pages deployment with repository name 'website'
-const basePath = '/website'
+// Only use basePath in production
+const basePath = process.env.NODE_ENV === 'production' ? '/website' : ''
 
 export function useBasePath() {
   return basePath

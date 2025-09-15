@@ -45,16 +45,16 @@ export default function ProjectsPage() {
         <main className="container mx-auto px-4 py-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h1 className="text-4xl font-bold mb-4 text-emerald-400">Projects</h1>
+              <h1 className="text-4xl font-bold mb-4 text-primary">Projects</h1>
               <p className="text-xl text-muted-foreground">
-                No projects found. Add Markdown files to <code className="text-emerald-300">content/projects/</code> to get started.
+                No projects found. Add Markdown files to <code className="text-primary">content/projects/</code> to get started.
               </p>
             </div>
             
             <div className="bg-slate-900/50 border border-slate-700 rounded-lg p-6">
-              <h3 className="text-lg font-semibold mb-4 text-emerald-400">Getting Started</h3>
+              <h3 className="text-lg font-semibold mb-4 text-primary">Getting Started</h3>
               <p className="text-muted-foreground mb-4">
-                Create a new Markdown file in the <code className="text-emerald-300">content/projects/</code> directory with the following frontmatter:
+                Create a new Markdown file in the <code className="text-primary">content/projects/</code> directory with the following frontmatter:
               </p>
               <pre className="bg-slate-800 border border-slate-600 rounded p-4 text-sm text-emerald-300 overflow-x-auto">
 {`---
