@@ -33,6 +33,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
+      - name: Clean previous builds
+        run: |
+          rm -rf .next out
+          echo "Cleaned previous build artifacts"
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
         with:
