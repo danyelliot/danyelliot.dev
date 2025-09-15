@@ -49,8 +49,27 @@ jobs:
         run: |
           echo "Checking build output..."
           ls -la
+          echo "Checking for .next directory..."
+          ls -la .next/ || echo ".next directory not found"
           echo "Checking for out directory..."
           ls -la out/ || echo "out directory not found"
+
+      - name: Ensure out directory exists
+        run: |
+          if [ ! -d "out" ]; then
+            echo "Creating out directory and copying from .next..."
+            mkdir -p out
+            cp -r .next/static out/ || echo "No static directory found"
+            cp -r .next/server/app out/ || echo "No server/app directory found"
+            # Alternative: copy everything from .next if out wasn't created
+            if [ ! "$(ls -A out)" ]; then
+              echo "out directory is empty, copying from .next..."
+              rm -rf out
+              cp -r .next out
+            fi
+          fi
+          echo "Final out directory contents:"
+          ls -la out/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
