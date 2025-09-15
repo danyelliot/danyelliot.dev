@@ -1,10 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  distDir: 'out',
   trailingSlash: true,
-  basePath: process.env.GITHUB_ACTIONS ? '/danyelliot.dev' : '',
-  assetPrefix: process.env.GITHUB_ACTIONS ? '/danyelliot.dev/' : '',
+  // Remove basePath for GitHub Pages with custom domain
   eslint: {
     ignoreDuringBuilds: true,
   },
