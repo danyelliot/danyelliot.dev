@@ -2,7 +2,7 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: '/danyelliot.dev',
+  basePath: '/website',
   eslint: {
     ignoreDuringBuilds: true,
   },
