@@ -2,8 +2,7 @@ import { Navigation } from "@/components/navigation"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { CalendarIcon, ArrowRightIcon, TagIcon } from "lucide-react"
-import { getAllPosts } from "@/lib/posts"
+import { CalendarIcon, ArrowRightIcon, TagIcon, ClockIcon } from "lucide-react"
 import Link from "next/link"
 
 // Keep the old hardcoded posts as fallback if no markdown files exist
@@ -120,6 +119,9 @@ const getCategoryColor = (category: string) => {
 }
 
 export default function BlogPage() {
+  // Use hardcoded fallback posts for this old version
+  const blogPosts = fallbackPosts;
+
   const featuredPosts = blogPosts.filter((post) => post.featured)
   const regularPosts = blogPosts.filter((post) => !post.featured)
 
