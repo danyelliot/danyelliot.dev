@@ -16,7 +16,7 @@ import {
 const categories = [
   {
     title: "Learning Journeys",
-    description: "Certifications, skill paths, and structured learning adventures",
+    description: "My path through certs, courses, and rabbit holes I fall into while learning",
     icon: BookOpenIcon,
     href: "/learning",
     tags: ["AZ-104", "AppSec", "Malware Analysis", "DevSecOps"],
@@ -24,7 +24,7 @@ const categories = [
   },
   {
     title: "Projects & Experiments",
-    description: "Labs, code demos, and things I built while learning",
+    description: "Stuff I built while learning, some work, some... well, they're learning experiences",
     icon: FlaskConicalIcon,
     href: "/projects",
     tags: ["Security Tools", "AI Demos", "Web Apps", "Scripts"],
@@ -32,7 +32,7 @@ const categories = [
   },
   {
     title: "Blog",
-    description: "Random thoughts, epic fails, and lessons learned",
+    description: "Brain dumps, epic fails, aha moments, and random thoughts that somehow make sense",
     icon: PenToolIcon,
     href: "/blog",
     tags: ["Reflections", "Tutorials", "Fails", "Insights"],
@@ -65,8 +65,8 @@ export default function HomePage() {
 
             {/* Tagline */}
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 text-balance max-w-3xl mx-auto leading-relaxed">
-              Just someone who keeps asking <span className="text-primary font-semibold">"why"</span> — exploring
-              Security, AI, and whatever breaks.
+              Just someone who can't stop asking <span className="text-primary font-semibold">"why?"</span> and 
+              breaking things to see how they work — diving deep into Security, AI, and everything in between.
             </p>
 
             {/* Skills Pills */}
@@ -85,8 +85,8 @@ export default function HomePage() {
 
             {/* CTA Button */}
             <Button size="lg" className="font-semibold group" asChild>
-              <Link href="/learning">
-                Start Exploring
+              <Link href="/blog">
+                Dive Into My Journey
                 <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
@@ -100,7 +100,7 @@ export default function HomePage() {
           <div className="max-w-2xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">What You'll Find Here</h2>
             <p className="text-lg text-muted-foreground text-balance">
-              A collection of learning adventures, experiments, and thoughts from someone who can't stop tinkering.
+              My digital playground where I document wins, fails, and everything I learn while breaking stuff and building things back up.
             </p>
           </div>
 

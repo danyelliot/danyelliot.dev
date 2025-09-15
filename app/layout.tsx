@@ -8,8 +8,8 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Dany Elliot - Learning Journey",
-  description: 'Just someone who keeps asking "why" — exploring Security, AI, and whatever breaks.',
+  title: "Dany Elliot - Digital Playground",
+  description: 'Just someone who can\'t stop asking "why?" and breaking things to see how they work — diving deep into Security, AI, and everything in between.',
   generator: "v0.app",
 }
 
