@@ -2,8 +2,8 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: process.env.NODE_ENV === 'production' ? '/danyelliot.dev' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/danyelliot.dev/' : '',
+  basePath: process.env.GITHUB_ACTIONS ? '/danyelliot.dev' : '',
+  assetPrefix: process.env.GITHUB_ACTIONS ? '/danyelliot.dev/' : '',
   eslint: {
     ignoreDuringBuilds: true,
   },
