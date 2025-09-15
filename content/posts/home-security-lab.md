@@ -3,6 +3,9 @@ title: "Building a Home Security Lab"
 date: "2025-09-10"
 tags: ["Security", "Lab Setup", "Virtualization", "Learning"]
 description: "Setting up a home cybersecurity lab for practicing penetration testing and security research."
+category: "Security"
+featured: true
+readTime: "12 min read"
 ---
 
 # Building a Home Security Lab

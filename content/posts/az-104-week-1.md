@@ -3,6 +3,9 @@ title: "AZ-104 Week 1 - Resource Groups & VMs"
 date: "2025-09-15"
 tags: ["Azure", "Cloud", "Learning Journey"]
 description: "Practicing basic Azure administration with VM creation and NSG configuration."
+category: "Learning"
+featured: false
+readTime: "8 min read"
 ---
 
 # AZ-104 Week 1: Resource Groups & VMs

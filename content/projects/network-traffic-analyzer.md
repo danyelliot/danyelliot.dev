@@ -3,6 +3,12 @@ title: "Network Traffic Analyzer"
 date: "2025-09-05"
 tags: ["Python", "Network Security", "Packet Analysis", "Wireshark"]
 description: "A Python-based network traffic analyzer for detecting suspicious patterns and potential security threats."
+category: "Network Security"
+status: "in-progress"
+image: "/network-traffic-monitoring-dashboard.jpg"
+technologies: ["Python", "Scapy", "Flask", "Chart.js"]
+features: ["Real-time Monitoring", "Anomaly Detection", "Traffic Visualization", "Alert System"]
+githubUrl: "https://github.com/danyelliot/network-traffic-analyzer"
 ---
 
 # Network Traffic Analyzer
