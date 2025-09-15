@@ -7,6 +7,7 @@ import { MoonIcon, SunIcon, MenuIcon, XIcon } from "lucide-react"
 import { useTheme } from "next-themes"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
+import { withBasePath } from "@/lib/base-path"
 
 const navigation = [
   { name: "Home", href: "/" },
